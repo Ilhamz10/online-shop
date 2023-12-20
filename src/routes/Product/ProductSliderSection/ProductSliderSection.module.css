@@ -1,0 +1,169 @@
+.productSection {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 40px;
+}
+
+.swiper-pagination {
+	width: 100%;
+	gap: 10px;
+}
+
+.productInfoPanel {
+	padding: 32px 0 32px 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.productPanelTop {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.productTitleCont {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.productPriceCont {
+	display: flex;
+}
+
+.productPanelCenter {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.productSize {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.option {
+	
+}
+
+.option select{
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	height: 100%;
+	padding: 12px;
+	border-radius: 4px;
+	border: 1px solid #222;
+}
+
+.option select option:first-child{
+	color: #9E9E9E;
+}
+
+.productColor {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.productDiscount {
+	color: #be343c;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.productTitle {
+	color: #222;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.productDescription {
+	color: #9e9e9e;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.productPrice {
+	color: #9e9e9e;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.productPriceDiscount {
+	color: #222;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.productColorText {
+	display: flex;
+	gap: 12px;
+}
+
+.productColor p {
+	font-weight: 500;
+	color: #222;
+	font-size: 16px;
+}
+
+.productColor span {
+	font-weight: 400;
+}
+
+.productPanelBottom {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.productPanelBottom p {
+	color: #222;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.productPanelBottom span {
+	color: #be343c;
+}
+
+.productPanelButtons {
+	display: grid;
+	grid-template-columns: 5fr 2fr;
+	gap: 8px;
+}
+
+.productPanelButtons button:first-child {
+	padding: 15px;
+	border-radius: 4px;
+	background: #222;
+	color: white;
+	width: 100%;
+}
+
+.productPanelButtons button:last-child {
+	max-width: 160px;
+	padding: 15px;
+	border-radius: 4px;
+	border: 1px solid #222;
+}
+
+@media (width < 565px) {
+	.productSection{
+		grid-template-columns: 1fr;
+	}
+
+	.productInfoPanel{
+		padding: 0;
+	}
+}

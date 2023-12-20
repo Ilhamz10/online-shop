@@ -1,0 +1,61 @@
+.Checkbox.category .categoryLabel {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.Checkbox input {
+	display: none;
+}
+
+.checkedImg {
+	display: none;
+}
+
+.Checkbox:has(input:checked) .checkedImg {
+	display: block;
+}
+
+.Checkbox:has(input:checked) .uncheckedImg {
+	display: none;
+}
+
+.Checkbox.color{
+    width: 100%;
+}
+
+.Checkbox.color:has(input:checked) .colorLabel{
+    border-color: black;
+}
+
+.Checkbox.color:has(input:checked) .colorLabel svg{
+    display: block;
+}
+
+.colorLabel svg{
+    display: none;
+}
+
+.color.white{
+    border: 1px solid #E6E6E6;
+}
+
+.color {
+	width: 24px;
+	height: 24px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.colorLabel {
+	display: grid;
+	grid-template-columns: 24px 1fr;
+	align-items: center;
+	width: 100%;
+	gap: 12px;
+	border-radius: 4px;
+	border: 1px solid #e6e6e6;
+    padding: 12px;
+}

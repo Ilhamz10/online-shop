@@ -1,0 +1,33 @@
+.navigation {
+	display: flex;
+	position: relative;
+	gap: 60px;
+	margin-bottom: 40px;
+}
+
+.navigation::before {
+	content: '';
+	width: 100%;
+	position: absolute;
+	height: 1px;
+	background: #e6e6e6;
+	bottom: 0.5px;
+	z-index: -1;
+}
+
+.navItem {
+	padding-bottom: 16px;
+}
+
+.navItem:has(a.active) {
+	border-bottom: 2px solid #222;
+}
+
+.navLink{
+    font-size: 24px;
+    color: #9E9E9E;
+}
+
+.navLink.active{
+    color: #222;
+}

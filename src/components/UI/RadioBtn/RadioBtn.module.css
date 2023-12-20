@@ -1,0 +1,48 @@
+.RadioBtn input {
+	display: none;
+}
+
+.RadioBtn label.size {
+	border-bottom: 1px solid transparent;
+	padding-bottom: 3px;
+	min-width: 27px;
+	display: block;
+	text-align: center;
+}
+
+.RadioBtn label.color {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label.color svg{
+    display: none;
+}
+
+.RadioBtn:has(input:checked) label.color svg{
+    display: block;
+}
+
+.RadioBtn label.size.disabled {
+	position: relative;
+	color: #454545;
+}
+
+.RadioBtn label.size.disabled::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 1px;
+	background: white;
+    left: 6px;
+	transform: rotate(-45deg);
+	bottom: 40%;
+}
+
+.RadioBtn:has(input:checked) label.size {
+	border-bottom-color: white;
+}

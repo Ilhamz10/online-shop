@@ -1,0 +1,40 @@
+.productContent {
+	padding: 32px 36px;
+}
+
+.allSections {
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+}
+
+.banner {
+	height: 570px;
+	background: url('../../assets/images/baner.png') 50% / cover no-repeat;
+	margin-bottom: 60px;
+}
+
+.breadCrumbs ul {
+	display: flex;
+	gap: 20px;
+}
+
+.shippingSection {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 80px;
+}
+
+.shippingSection .shippingImage {
+	width: 100%;
+}
+
+@media (width < 565px) {
+	.productInfoSection ul:first-child{
+		display: none;
+	}
+
+	.shippingSection{
+		grid-template-columns: 1fr;
+	}
+}

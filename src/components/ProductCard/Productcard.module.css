@@ -1,0 +1,210 @@
+.cardTop {
+	background: #222;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	padding: 4px 0;
+}
+
+.productImg {
+	position: relative;
+	height: 500px;
+	background: url('../../assets/images/product.png') top / cover no-repeat;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+
+.quickShop {
+	position: absolute;
+	bottom: 0;
+	padding: 16px 16px 20px;
+	background: #000;
+	width: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	transform: translateY(100%);
+	transition: 0.5s;
+}
+
+.quickShop.active {
+	transform: translateY(0);
+}
+
+.quickShopTop{
+	display: none;
+}
+
+.quickShop .buttons {
+	display: flex;
+	gap: 24px;
+}
+
+.quickShop .buttons button {
+	background: none;
+	border: none;
+	color: white;
+}
+
+.quickShop .size {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.quickShop .allSizes {
+	display: flex;
+	gap: 20px;
+}
+
+.quickShop .allSizes span {
+	min-width: 27px;
+}
+
+.quickShop .allSizes span.disabled {
+	position: relative;
+	color: #454545;
+}
+
+.quickShop .allSizes span.disabled::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 1px;
+	background: white;
+	transform: rotate(-45deg);
+	bottom: 40%;
+}
+
+.quickShop .buttons button:last-child {
+	color: #9e9e9e;
+}
+
+.quickShop hr {
+	border-color: gray;
+}
+
+.productTitle {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.productDescription {
+	color: #9e9e9e;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.productInfo {
+	padding-right: 24px;
+}
+
+.productPrice {
+	display: flex;
+	justify-content: space-between;
+}
+
+.discountPrice {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.highPrice {
+	color: #9e9e9e;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	text-decoration-line: line-through;
+}
+
+.price {
+	display: flex;
+	gap: 12px;
+}
+
+.productPrice button {
+	color: #222;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.ProductCard:has(.quickShop.active) .productPrice button {
+	color: #9e9e9e;
+}
+
+.quickShopBackground{
+	display: none;
+}
+
+@media (width < 565px) {
+	.productTitle,
+	.productDescription,
+	.productPrice .price p,
+	.productPrice button{
+		font-size: 14px;
+	}
+
+	.productImg{
+		height: 220px;
+	}
+
+	.cardTop{
+		font-size: 10px;
+	}
+
+	.productPrice{
+		display: block;
+	}
+
+	.quickShop{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+		font-size: 14px;
+		gap: 16px;
+		padding: 16px 0;
+	}
+
+	.quickShopTop{
+		display: block;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 12px;
+	}
+
+	.quickShop .size{
+		gap: 12px;
+	}
+
+	.quickShopContent{
+		padding: 0 12px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.ProductCard:has(.quickShop.active) .quickShopBackground{
+		display: block;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.50);
+		z-index: 3;
+	}
+}

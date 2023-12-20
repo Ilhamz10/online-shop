@@ -1,0 +1,15 @@
+.Dropdown {
+	min-width: 220px;
+    text-align: right;
+}
+
+.dropdownMenu {
+	position: absolute;
+	z-index: 1;
+	min-width: 220px;
+	background: white;
+}
+
+.dropdownItem{
+    cursor: pointer;
+}
